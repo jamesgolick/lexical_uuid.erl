@@ -1,0 +1,13 @@
+{application, lexical_uuid,
+ [
+  {description, ""},
+  {vsn, git},
+  {registered, []},
+  {modules, [lexical_uuid,lexical_uuid_util]},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { lexical_uuid_app, []}},
+  {env, []}
+ ]}.
