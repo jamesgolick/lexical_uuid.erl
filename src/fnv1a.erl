@@ -35,6 +35,7 @@ gen(_, Times, Acc) when Times == 0 ->
 gen(Bytes, Times, Acc) ->
   gen(Bytes, Times - 1, [Bytes | Acc]).
 
+%% Converted from https://raw.github.com/jakedouglas/fnv-ruby/master/test/fnv_test.rb
 fnv1a_test() ->
   Tests = [{<<"">>                                                                          , 16#cbf29ce484222325},
            {<<"a">>                                                                         , 16#af63dc4c8601ec8c},
