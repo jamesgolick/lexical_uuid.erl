@@ -45,7 +45,7 @@ get_binary_string() ->
 %% Server implementation, a.k.a.: callbacks
 
 init([]) ->
-  {ok, #state{worker_id=lexical_uuid_util:get_fqdn()}}.
+  {ok, #state{worker_id=fqdn:get()}}.
 
 handle_call(stop, _From, State) ->
   {stop, normal, stopped, State};
