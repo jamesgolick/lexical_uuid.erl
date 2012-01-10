@@ -1,5 +1,7 @@
 -module(fnv1a).
 
+-author("Cliff Moon").
+
 -export([hash/1]).
 
 -define(OFFSET_BASIS, 14695981039346656037).
