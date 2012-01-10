@@ -45,39 +45,30 @@ get_binary_string() ->
 %% Server implementation, a.k.a.: callbacks
 
 init([]) ->
-  lager:debug("init", []),
   {ok, #state{worker_id=lexical_uuid_util:get_fqdn()}}.
 
 handle_call(stop, _From, State) ->
-  lager:debug("stopping by ~p, state was ~p.", [_From, State]),
   {stop, normal, stopped, State};
 
 handle_call(state, _From, State) ->
-  lager:debug("~p is asking for the state.", [_From]),
   {reply, State, State};
 
 handle_call(get, _From, State=#state{last=LastTime,worker_id=WorkerID}) ->
-  lager:debug("~p is asking for a uuid.", [_From]),
   NextTime = lexical_uuid_clock:get_next_timestamp(LastTime),
   UUID = lexical_uuid_util:make(NextTime, WorkerID),
   {reply, UUID, State#state{last=NextTime}};
 
 handle_call(_Request, _From, State) ->
-  lager:debug("call ~p, ~p, ~p.", [_Request, _From, State]),
   {reply, ok, State}.
 
 handle_cast(_Msg, State) ->
-  lager:debug("cast ~p, ~p.", [_Msg, State]),
   {noreply, State}.
 
 handle_info(_Info, State) ->
-  lager:debug("info ~p, ~p.", [_Info, State]),
   {noreply, State}.
 
 terminate(_Reason, _State) ->
-  lager:debug("terminate ~p, ~p", [_Reason, _State]),
   ok.
 
 code_change(_OldVsn, State, _Extra) ->
-  lager:debug("code_change ~p, ~p, ~p", [_OldVsn, State, _Extra]),
   {ok, State}.
