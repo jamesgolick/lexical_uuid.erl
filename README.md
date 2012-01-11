@@ -19,8 +19,8 @@ I've also got a rubby implementation here: http://github.com/jamesgolick/lexical
 # Credits
 
   * Idea: Coda Hale ([@coda](http://twitter.com/coda)). Originally seen in his (now defunct) http://github.com/codahale/cassie project.
-  * fnv1a: Cliff Moon ([@moonpolysoft](http://twitter.com/moonpolysoft)). https://github.com/cliffmoon/ef\_examples/blob/master/src/fnv\_offset.erl
-  * fnv1a tests: Jake Douglas ([@jakedouglas](http://twitter.com/jakedouglas)). https://raw.github.com/jakedouglas/fnv-ruby/master/test/fnv\_test.rb
+  * fnv1a: Cliff Moon ([@moonpolysoft](http://twitter.com/moonpolysoft)). https://github.com/cliffmoon/ef_examples/blob/master/src/fnv_offset.erl
+  * fnv1a tests: Jake Douglas ([@jakedouglas](http://twitter.com/jakedouglas)). https://raw.github.com/jakedouglas/fnv-ruby/master/test/fnv_test.rb
 
 # Copyright
   
