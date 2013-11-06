@@ -15,4 +15,4 @@ get_next_timestamp(LastTime) ->
 
 tick() ->
   {Megasecs, Secs, Microsecs} = erlang:now(),
-  (((Megasecs * 100000) + Secs) * 100000) + Microsecs.
+  (((Megasecs * 1000000) + Secs) * 1000000) + Microsecs.
